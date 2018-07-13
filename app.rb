@@ -4,9 +4,14 @@ require_relative 'coin_exchange.rb'
 enable :sessions
 
 get '/' do
-  ''
+  
+  erb :default
 end
 
+post '/' do
+  session['cents'] = params['cents']
+  redirect '/'
+end
 # we want to continue with the coin changer app.
 # When we enter the amount of change to process we want to see a pop up box
 # that returns current date and time.
