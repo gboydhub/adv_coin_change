@@ -1,6 +1,10 @@
-<form action="get_coins" method="post">
+<form action="change" method="post">
 <input type="number" class="txtbox" name="cents"><br>
 <button type="submit" class="btn">Get Change</button>
 </form>
-<br><br>
-<div id="coin_result"></div>
+<br>
+<div id="coin_result">
+    <% if defined? coins %>
+        <%= coins %>
+    <% end %>
+</div>
