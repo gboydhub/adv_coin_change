@@ -3,7 +3,7 @@
 <button type="submit" class="btn" onclick="window.alert(getDateString());">Get Change</button>
 </form>
 <br>
-<div id="coin_result" onmouseenter="changeResults('color:red');" onmouseleave="changeResults('color:white');">
+<div id="coin_result" style="color:white" onmouseenter="changeResults('color:red');" onmouseleave="changeResults('color:white');">
     <% if defined? coins %>
         <script type="text/javascript">
             document.write(getDateString());
