@@ -2,7 +2,12 @@ def coin_exchange(cents)
   coins_back = {}
   while cents > 0 do
     if cents >= 25
-      cents -= 25
+      quarters_needed = (cents / 25).floor
+
+      cents -= quarters_needed * 25
+      if(quarters_needed > 2)
+        coins_back[:quarters] = quarters_needed - 1
+      end
       # Pluralization code
       if !coins_back[:quarter] && !coins_back[:quarters]
         coins_back[:quarter] = 1
